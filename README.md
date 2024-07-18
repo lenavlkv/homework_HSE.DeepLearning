@@ -76,8 +76,6 @@ COMBINED            |   0.68477|   0.83007|   0.62329|
 
 #### YoloV5DetectionsProvider
 
-![YoloV5DetectionsProvider](./resources/yolov5_detections_provider.png)
-
 This _DetectionsProvider_ implements [Yolo V5](https://github.com/ultralytics/yolov5) object detection model.
 
 This project implements `YoloV5` as a submodule.
@@ -100,8 +98,6 @@ deep-sort run ./data/sequences -e F1 Precision Recall -d yolov5n --n_init 0
 ```
 
 There are a lot of unrecognized people.
-
-![YoloV5 Nano](./resources/detection_score_yolov5n.png)
 
 FPS score also dropped dramatically across the whole dataset (almost twice). Though, please, approach this and
 any further notes about FPS drops with a reasonable pragmatism: **the local setup which is used for this project
@@ -129,8 +125,6 @@ deep-sort run ./data/sequences -e F1 Precision Recall -d yolov5n6 --n_init 0
 
 This implementation provides more detections.
 
-![YoloV5 Nano 6](./resources/detection_score_yolov5n6.png)
-
 Performs badly on [`KITTI17`](./data/sequences/KITTI-17)
 
 ![YoloV5 Nano 6 KITTI17](./resources/detection_score_yolov5n6_kitti17.png)
@@ -156,8 +150,6 @@ deep-sort run ./data/sequences -e F1 Precision Recall -d yolov5s --n_init 0
 
 More accurate than `nano` models.
 
-![YoloV5 Small](./resources/detection_score_yolov5s.png)
-
 **Final scores**
 
 ```text
@@ -178,8 +170,6 @@ deep-sort run ./data/sequences -e F1 Precision Recall -d yolov5m --n_init 0
 ```
 
 Good quality of detections.
-
-![YoloV5 Medium](./resources/detection_score_yolov5m.png)
 
 **Final scores**
 
@@ -208,7 +198,6 @@ Outperforms all other `YOLO` models. However, not applicable in runtime
 **at least on CPU-bounded** devices. Yet, some techniques as resizing or
 buffering can help to improve performance if this model is required for usage.
 
-![YoloV5 Large](./resources/detection_score_yolov5l.png)
 
 **Final scores**
 
@@ -248,7 +237,6 @@ deep-sort run ./data/sequences -e F1 Precision Recall -d nanodet_legacy --n_init
 
 Runs bad on `PETS09-S2L1` and `MOT16-11`.
 
-![Nanodet Legacy](./resources/detection_score_nanodet_legacy.png)
 
 **Final scores**
 
@@ -270,8 +258,6 @@ deep-sort run ./data/sequences -e F1 Precision Recall -d nanodet_plusm320 --n_in
 ```
 
 Still runs terrible on `PETS09-S2L1`
-
-![Nanodet Plus M 320](./resources/detection_score_nanodet_plusm320.png)
 
 **Final scores**
 
@@ -295,7 +281,6 @@ deep-sort run ./data/sequences -e F1 Precision Recall -d nanodet_plusm15x320 --n
 Performs better `PETS09-S2L1` but still far away from idea. Perhaps,
 the objects in the frame are too small for this model.
 
-![Nanodet Plus M 1.5x 320](./resources/detection_score_nanodet_plusm15x320.png)
 
 **Final scores**
 
@@ -318,9 +303,6 @@ deep-sort run ./data/sequences -e F1 Precision Recall -d nanodet_plusm416 --n_in
 
 Cannot detect small objects
 
-| Small objects                                                               | Big objects                                                                |
-|-----------------------------------------------------------------------------|----------------------------------------------------------------------------|
-| ![Nanodet Small ojects](./resources/detection_score_nanodet_plusm416_1.png) | ![Nanodet Big objects](./resources/detection_score_nanodet_plusm416_2.png) |
 
 **Final scores**
 
@@ -345,7 +327,6 @@ The best performance across all `nanodets`. However, the final quality is
 still not enough. Though it is worth mentioning that frame rate is much
 better than using `Yolo`.
 
-![Nanodet M 1.5X 416](./resources/detection_score_nanodet_plusm15x416.png)
 
 **Final scores**
 
@@ -383,9 +364,6 @@ deep-sort run ./data/sequences -e F1 Precision Recall -d mmdet_darknet --n_init 
 
 Detections quality is amazing but performance has some space for improvements.
 
-![DarkNet-53](./resources/detection_score_mmdet_darknet_1.png)
-
-![DarkNet-53](./resources/detection_score_mmdet_darknet_2.png)
 
 **Final scores**
 
@@ -407,8 +385,6 @@ Command to run the sequence in the given configuration is:
 ```bash
 deep-sort run ./data/sequences -e F1 Precision Recall -d mmdet_mobilenetv2 --n_init 0 --extra path_to_mobilenet_model
 ```
-
-![MobileNet V2](./resources/detection_score_mmdet_mobilenetv2.png)
 
 **Final scores**
 
@@ -432,7 +408,6 @@ deep-sort run ./data/sequences -e F1 Precision Recall -d mmdet_yoloxt --n_init 0
 
 Super impressive for a `tiny` model as it performs better than the original algorithm.
 
-![YoloXT](./resources/detection_score_mmdet_yoloxt.png)
 
 **Final scores**
 
@@ -455,7 +430,6 @@ deep-sort run ./data/sequences -e F1 Precision Recall -d mmdet_yoloxs --n_init 0
 
 Performance is a bit worse but still _tolerable_ on the **CPU-bounded** devices. 
 
-![YoloXS](./resources/detection_score_mmdet_yoloxs.png)
 
 **Final scores**
 
@@ -476,7 +450,6 @@ COMBINED            |   0.77905|   0.94493|   0.67457|
 deep-sort run ./data/sequences -e F1 Precision Recall -d mmdet_yoloxl --n_init 0 --extra path_to_yolox_model
 ```
 
-![YoloXL](./resources/detection_score_mmdet_yoloxl.png)
 
 **Final scores**
 
@@ -493,7 +466,6 @@ COMBINED            |   0.82718|   0.93382|   0.74996|
 
 #### YoloV8DetectionsProvider
 
-![YoloV8DetectionsProvider](./resources/yolov8_detections_provider.png)
 
 _YoloV8DetectionsProvider_ uses [YoloV8](https://github.com/ultralytics/ultralytics) model.
 
@@ -511,8 +483,6 @@ deep-sort run ./data/sequences -e F1 Precision Recall -d yolov8n --n_init 0
 ```
 
 Good performance, it runs about ~90-100% of the original speed, i.e. 10% FPS drop only.
-
-![YoloV8N](./resources/detection_score_yolov8n.png)
 
 **Final scores**
 
@@ -535,11 +505,9 @@ Metrics are impressive for `nano` model.
 deep-sort run ./data/sequences -e F1 Precision Recall -d yolov8s --n_init 0
 ```
 
-![YoloV8S 1](./resources/detection_score_yolov8s_1.png)
-
 A lot of detections for a small model as well.
 
-![YoloV8S 2](./resources/detection_score_yolov8s_1.png)
+
 
 **Final scores**
 
@@ -565,8 +533,6 @@ deep-sort run ./data/sequences -e F1 Precision Recall -d yolov8m --n_init 0
 The performance is a bit off, at least on **CPU-bounded** devices. Though, it seems
 it should be just fine on GPU ones.
 
-![YoloV8M](./resources/detection_score_yolov8m.png)
-
 
 **Final scores**
 
@@ -588,8 +554,6 @@ deep-sort run ./data/sequences -e F1 Precision Recall -d yolov8m --n_init 0
 
 It seems real-time performance would not be amazing even on GPU ones.
 
-![YoloV8L](./resources/detection_score_yolov8l.png)
-
 
 **Final scores**
 
@@ -606,7 +570,6 @@ COMBINED            |   0.77461|   0.94204|    0.6666|
 
 #### HogDetectionsProvider
 
-![HogDetectionsProvider](./resources/hog_detections_provider.png)
 
 _HogDetectionsProvider_ uses [HOGDescriptor](https://docs.opencv.org/4.x/d5/d33/structcv_1_1HOGDescriptor.html) and
 [detectMultiScale](https://docs.opencv.org/4.8.0/d1/de5/classcv_1_1CascadeClassifier.html#aaf8181cb63968136476ec4204ffca498)
@@ -618,9 +581,6 @@ it is working not that bad as you may expect. Actually, quite surprising for a c
 ```bash
 deep-sort run ./data/sequences -e F1 Precision Recall -d hog --n_init 0
 ```
-
-![Hog 1](./resources/detection_score_hog_1.png)
-![Hog 2](./resources/detection_score_hog_2.png)
 
 **Final scores**
 
@@ -665,20 +625,15 @@ COMBINED            |   0.99086|   0.99281|   0.98893|
 
 ### Features extraction
 
-![Features extractor](./resources/features_extractor.png)
-
 Features extractor is the main abstraction for converting a detection area into a feature vector. Those features play
 important role for **REID**.
 
 The API of a features extractor:
 
-| Method                                                          | Description                                                                                                                                 |
-|-----------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
+
 | **extract(image: np.ndarray, boxes: list[Rect]) -> np.ndarray** | it accepts original image and found detections, and returns a list of features vectors. Feature vectors go in the same order as detections. |
 
 #### Tensorflow V1 [from original DeepSORT work]
-
-![TFV1 Features extractor](./resources/tfv1_features_extractor.png)
 
 [TensorflowV1FeaturesExtractor](./src/deep_sort/features_extractor/tensorflow_v1_features_extractor.py) provides
 a tensorflow model to extract feature vectors from detections.
@@ -701,8 +656,6 @@ COMBINED            |   0.82088|   0.85963|   0.78736|
 ```
 
 #### Torchreid
-
-![TorchReidFeatures Extractor](./resources/torchreid_features_extractor.png)
 
 _TorchreidFeaturesExtractor_ is using [torchreid](https://github.com/KaiyangZhou/deep-person-reid). 
 
@@ -928,10 +881,6 @@ Just remember to run segmentation you need to specify `-s` instead of `-d`.
 
 Use `--visualise_segmentations` to see segmentation visualised on the image.
 
-| Screen 1                                                           | Screen 2                                                           | Screen 3                                                           |
-|--------------------------------------------------------------------|--------------------------------------------------------------------|--------------------------------------------------------------------|
-| ![Detectron2 #1](./resources/detectron2_segmentation_screen_1.png) | ![Detectron2 #1](./resources/detectron2_segmentation_screen_2.png) | ![Detectron2 #1](./resources/detectron2_segmentation_screen_3.png) |
-
 **Scores for KITTI-17**
 
 ```text
@@ -944,7 +893,6 @@ COMBINED            |   0.48867|   0.49342|   0.48488|   0.75857|   0.82577|   0
 
 #### Geometry, Rect
 
-![Rect](./resources/rect.png)
 
 Rect represents a rectangular area and helps to deal with their geometry. It provides a few helpful methods:
 
@@ -973,8 +921,6 @@ This is the Pull Request that fixes the issue:
 - [#314 Fix bbox bottom right corner calculation](https://github.com/nwojke/deep_sort/pull/314)
 
 #### App, Window
-
-![Window](./resources/windows.png)
 
 App provides flexible windows control system.
 
@@ -1008,7 +954,6 @@ Finds the spatial alignment between predicted detections and ground truth detect
 [_IOU_](https://en.wikipedia.org/wiki/Jaccard_index) is used to find localisation between **one** detection and **one**
 ground truth object.
 
-![Intersection Over Union picture](./resources/iou.png)
 
 Overall Localization Accuracy (LocA) is calculated over all pairs across the **entire dataset**.
 
