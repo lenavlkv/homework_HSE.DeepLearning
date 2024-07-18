@@ -1,0 +1,2 @@
+[console_scripts]
+deep-sort = src.commands.deep_sort:main
