@@ -18,9 +18,6 @@ The project employs the following videos:
 - TUD-Campus
 - TUD-Stadtmitte
 
-MOT is published under [Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License](https://creativecommons.org/licenses/by-nc-sa/3.0/).
-
-
 ## Dependencies
 
 The code is compatible with **Python 3.10+**.
