@@ -44,7 +44,7 @@ The project depends on other projects:
 - [Torchreid](https://github.com/KaiyangZhou/deep-person-reid)
 
 You can find some of them in [the dependencies folder](./dependencies).
-
+Colab: https://colab.research.google.com/drive/1AQJxUEmnq7NXYZenc6S99vDEipzYC25D?usp=sharing 
 ## Running
 
 ### Setup
